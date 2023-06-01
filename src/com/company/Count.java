@@ -39,13 +39,9 @@ public class Count {
             i++;
             int buffer = i;
             double value_2 = factor();
-            switch (tokens.get(i-1).getType()){
-                case ("*") -> {
-                    value_1 *= value_2;
-                }
-                case ("/") -> {
-                    value_1 /= value_2;
-                }
+            switch (tokens.get(buffer-1).getType()){
+                case ("*") -> value_1 *= value_2;
+                case ("/") -> value_1 /= value_2;
             }
         }
         return value_1;
